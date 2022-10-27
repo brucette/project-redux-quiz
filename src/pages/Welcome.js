@@ -6,7 +6,7 @@ export const Welcome = () => {
   return (
     <OuterWrapper>
       <MainQuestion>Halloween Quiz</MainQuestion>
-      <p>Start here</p>
+      <p>Start here-button</p>
     </OuterWrapper>
   )
 }

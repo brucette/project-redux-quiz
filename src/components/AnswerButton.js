@@ -31,7 +31,7 @@ export const AnswerButton = ({ index, option }) => {
   )
 };
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   background-color: aqua;
   color: white;
   font-weight: bold;
