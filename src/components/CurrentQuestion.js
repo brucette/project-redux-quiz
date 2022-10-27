@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import { useSelector } from 'react-redux';
 // import styled from 'styled-components';

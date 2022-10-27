@@ -1,10 +1,10 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 
-export const AnswerButton = () => {
+export const NextButton = () => {
   return (
-    <>
-      <p>hej</p>
-      <p>då!</p>
-    </>
+    <div>
+      <p>Här är startknappen</p>
+    </div>
   )
 }

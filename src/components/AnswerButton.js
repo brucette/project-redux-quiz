@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';

@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import styled from 'styled-components';
 import startImage from '../images/startImage.png';
 import mobileBG2 from '../images/mobileBG2.png';
@@ -37,4 +38,5 @@ export const OuterWrapper = styled.div`
 
 export const MainQuestion = styled.h1`
   color: white;
+  font-family: 'Special Elite', cursive;
 `
