@@ -16,7 +16,7 @@ export const CurrentQuestion = () => {
       <MainQuestion>Question: {question.questionText}</MainQuestion>
       {question.options.map((option, index) => {
         return <AnswerButton
-          key={option.id}
+          key={option}
           option={option}
           index={index} />
       })}

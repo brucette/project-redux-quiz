@@ -1,8 +1,8 @@
-/* eslint-disable no-nested-ternary */
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import { quiz } from '../reducers/quiz';
+import { Devices } from './MainStyles';
 
 export const AnswerButton = ({ index, option }) => {
   const dispatch = useDispatch();
@@ -17,13 +17,28 @@ export const AnswerButton = ({ index, option }) => {
     dispatch(quiz.actions.submitAnswer({
       questionId, answerIndex
     }));
+    console.log('questionId', questionId)
+    console.log('answerIndex', answerIndex)
   }
 
-  const correctAnswer = question.correctAnswerIndex === usersAnswer && option.id
+  const correctAnswer = usersAnswer && index === question.correctAnswerIndex
+  console.log('question.correctAnswerIndex', question.correctAnswerIndex)
+  console.log('usersAnswer && index', usersAnswer && index)
+  console.log('correctAnswer', correctAnswer)
 
   return (
     <StyledButton
-      className={correctAnswer ? 'correct' : !correctAnswer ? 'wrong' : 'default'}
+      className={
+        (() => {
+          if (correctAnswer === true) {
+            return 'correct'
+          } if (correctAnswer === false) {
+            return 'wrong'
+          } else {
+            return 'default'
+          }
+        })
+      }
       onClick={() => onAnswerSubmit(question.id, index)}
       disabled={usersAnswer}
       type="button">{option}
@@ -31,19 +46,32 @@ export const AnswerButton = ({ index, option }) => {
   )
 };
 
-export const StyledButton = styled.button`
-  background-color: aqua;
-  color: white;
+const StyledButton = styled.button`
+  background-color: #FFCD42;
+  border: #FFCD42;
+  width: 200px;
+  border-radius: 10px;
+  color: black;
   font-weight: bold;
   font-size: 25px;
   padding: 20px;
-  margin: 5px;
-
+  margin: 10px;
   &.correct {
     background-color: green;   
   }
-
   &.wrong {
     background-color: red;
+  }
+  &:disabled {
+    /* background-color: lightgray; */
+    opacity: .50;
+  }
+  @media ${Devices.tablet} {
+    &:hover {
+      filter: saturate(50);
+      &:disabled {
+        filter: saturate(1);
+      }
+    }
   }
 `

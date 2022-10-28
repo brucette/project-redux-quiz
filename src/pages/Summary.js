@@ -64,7 +64,7 @@ const InnerWrapper = styled.section`
   justify-content: center;
   font-size: 18px;
   
-  @media ${Devices.laptop} {
+  @media ${Devices.tablet} {
     font-size: 25px;
   }
 `
@@ -85,12 +85,11 @@ const SummaryText = styled.div`
   text-align: center;
   
 
-  @media ${Devices.laptop} {
+  @media ${Devices.tablet} {
     width: 80%;
-  }
+  }                                                                                                                                                                        
 
 `
-
 const RestartButton = styled(StyledButton)`
   border-radius: 5px;
   color: black;
@@ -99,7 +98,7 @@ const RestartButton = styled(StyledButton)`
   font-family: 'Courier Prime', monospace;
   margin-top: 0;
 
-  @media ${Devices.laptop} {
+  @media ${Devices.tablet} {
     font-size: 20px;
     padding: 15px;
   }
@@ -109,7 +108,6 @@ const RestartButton = styled(StyledButton)`
   transform: scale(1.1);
   }
 `
-
 const Credits = styled.div`
   width: 80%;
   text-align: center;
